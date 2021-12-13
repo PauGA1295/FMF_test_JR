@@ -1,0 +1,48 @@
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+<form [formGroup]="form" (ngSubmit)="save($event)">
+    <div>
+      <label>Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre">
+    </div>
+    <div>
+      <label>Apellido Paterno</label>
+      <input type="text" id="ap" formControlName="ap">
+    </div>
+    <div>
+      <label>Apellido Materno</label>
+      <input type="text" id="am" formControlName="am">
+    </div>
+    <div>
+      <label>Fecha Nacimiento</label>
+      <input type="date" id="fnac" formControlName="fnac" >
+      <script src="js/index.js"></script>
+    </div>
+    <div>
+      <label>Genero</label>
+      <select name="genero" formControlName="genero" >
+        <option *ngFor="let gen of generos">{{gen.nombre}}</option>
+      </select>
+    </div>
+    <div>
+      <label>Nacionalidad</label>
+      <select name="nacionalidad" formControlName="nacionalidad" >
+        <option *ngFor="let nac of nacionalidades">{{nac.nombre}}</option>
+      </select>
+    </div>
+    <div>
+      <label>Club de Futbol</label>
+      <select name="club" formControlName="club" >
+        <option *ngFor="let clu of clubes">{{clu.nombre}}</option>
+      </select>
+    </div>
+    <div>
+      <label>RFC</label>
+      <input type="varchar" id="rfc" formControlName="rfc">
+    </div>
+    <div>
+      <label>Ocupacion</label>
+      <input type="text" id="ocupacion" formControlName="ocupacion">
+    </div>
+    <button type="submit" [disabled]="form.invalid">Guardar</button>
+</form>

@@ -1,0 +1,14 @@
+.form-register{
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 400px;
+}
+.form-register_body{
+  padding: 30px 54px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #99ccff;
+  box-shadow: 5px 5px 5px 3px var( -- color-shadow);
+  border-radius: 4px;
+}
+
